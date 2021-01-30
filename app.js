@@ -3,9 +3,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const mongoSanitize = require('express-mongo-sanitize');
 const path = require('path');
+const helmet = require("helmet");
 
 // Création de l'app
 const app = express();
+
+// Sécurisation avec le package Helmet
+app.use(helmet());
 
 // Protection contre les injections sur MongoDB
 app.use(mongoSanitize({ replaceWith: "_" }));
