@@ -1,22 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const mongoSanitize = require('express-mongo-sanitize');
 const path = require('path');
+
+// Création de l'app
+const app = express();
+
+// Protection contre les injections sur MongoDB
+app.use(mongoSanitize({ replaceWith: "_" }));
 
 // Appel des routes
 const userRoutes = require('./routes/user'); // Utilisateur
 const sauceRoutes = require('./routes/sauce'); // Sauce
 
 // Connection à la bdd
-mongoose.connect('mongodb+srv://abollinger:JsABpdVeC92@cluster0.dq28w.mongodb.net/sopekocko?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://user:phsm6ZnNiDYFdDzl@cluster0.dq28w.mongodb.net/sopekocko?retryWrites=true&w=majority',
     { useNewUrlParser: true,
     useUnifiedTopology: true })
         .then(() => console.log('Connexion à MongoDB réussie !'))
         .catch(() => console.log('Connexion à MongoDB échouée !'));
-
-
-// Création de l'app
-const app = express();
 
 // Définition Headers
 app.use((req, res, next) => {

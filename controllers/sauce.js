@@ -87,7 +87,7 @@ exports.likeDislikeSauce = (req, res, next) => {
             }
             Sauce.updateOne({ _id: req.params.id }, { likes: likesTmp, dislikes: dislikesTmp, usersLiked: usersLikedTmp, usersDisliked: usersDislikedTmp, _id: req.params.id })
                 .then(() => res.status(200).json({ message: 'Objet modifié !'}))
-                .catch(error => res.status(400).json({ error }));
+                .catch(error => res.status(500).json({ error }));
         })
         .catch(error => res.status(500).json({ error }));
 };
