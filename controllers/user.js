@@ -1,16 +1,13 @@
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const cryptojs = require('crypto-js');
-
 const User = require('../models/user');
+const jwt = require('jsonwebtoken');
 
 // Controleur d'inscription (signup) avec Hash du MdP
 exports.signup = (req, res, next) => {
-    const cryptedEmail = cryptojs.HmacSHA256(req.body.email, 'EMAIL_ENCRYPTION_KEY').toString();
     bcrypt.hash(req.body.password, 10)
         .then(hash => {
             const user = new User({
-                email: cryptedEmail,
+                email: req.body.email,
                 password: hash
             });
             user.save()
@@ -22,8 +19,7 @@ exports.signup = (req, res, next) => {
 
 // Controleur de connexion (login) avec comparaison des Hash de MdP
 exports.login = (req, res, next) => {
-    const cryptedEmail = cryptojs.HmacSHA256(req.body.email, 'EMAIL_ENCRYPTION_KEY').toString();
-    User.findOne({ email: cryptedEmail })
+    User.findOne({ email: req.body.email })
         .then(user => {
             if (!user) {
                 return res.status(401).json({ error: 'Utilisateur non trouvé !' });
