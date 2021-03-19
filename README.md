@@ -11,6 +11,6 @@ node server
 
 The API should run on ```http://localhost:3000/```.
 
-You can find the front-end to use with at 
+You can find the front-end to use with at :
 
 https://github.com/OpenClassrooms-Student-Center/dwj-projet6
