@@ -9,7 +9,7 @@ npm install
 node server
 ```
 
-The API should run on localhost:3000 
+The API should run on ```http://localhost:3000/```.
 
 You can find the front-end to use with at 
 
