@@ -19,6 +19,10 @@ node server
 
 The API should run on ```http://localhost:3000/```.
 
+## Preview
+
+On [Heroku](https://oc-p6-api.herokuapp.com)
+
 ## Front-end
 
 For this project, the front-end is already done. You can find the front-end to use with at :
