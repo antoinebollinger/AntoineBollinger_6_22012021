@@ -1,4 +1,6 @@
-# Openclassrooms project #6 : create a secured API
+# Openclassrooms Project #6: Build a Secure API for a Review App 
+
+What I used: Node.js, Express, MongoDB.
 
 ## Getting started
 
