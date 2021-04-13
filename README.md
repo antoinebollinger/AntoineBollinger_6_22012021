@@ -1,6 +1,6 @@
 # Openclassrooms Project #6: Build a Secure API for a Review App 
 
-What I used: Node.js, Express, MongoDB.
+What I used: [![Nodejs](https://img.shields.io/badge/-Nodejs-green?logo=Node.js)](https://nodejs.org), [![Express](https://img.shields.io/badge/-Express-black?logo=express)](http://expressjs.com), [![MongoDB](https://img.shields.io/badge/-MongoDB-green?logo=mongodb)](https://www.mongodb.com).
 
 ## Getting started
 
@@ -23,7 +23,7 @@ The API should run on ```http://localhost:3000/```.
 
 ## Preview
 
-On [Heroku](https://oc-p6-api.herokuapp.com)
+On [![Heroku](https://img.shields.io/badge/-Heroku-430098?logo=heroku)](https://oc-p6-api.herokuapp.com).
 
 ## Front-end
 
