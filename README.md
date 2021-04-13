@@ -1,6 +1,9 @@
 # Openclassrooms Project #6: Build a Secure API for a Review App 
 
-What I used: [![Nodejs](https://img.shields.io/badge/-Nodejs-green?logo=Node.js)](https://nodejs.org), [![Express](https://img.shields.io/badge/-Express-black?logo=express)](http://expressjs.com), [![MongoDB](https://img.shields.io/badge/-MongoDB-green?logo=mongodb)](https://www.mongodb.com).
+What I used: 
+[![Nodejs](https://img.shields.io/badge/-Nodejs-green?logo=Node.js)](https://nodejs.org)
+[![Express](https://img.shields.io/badge/-Express-black?logo=express)](http://expressjs.com)
+[![MongoDB](https://img.shields.io/badge/-MongoDB-green?logo=mongodb)](https://www.mongodb.com).
 
 ## Getting started
 
